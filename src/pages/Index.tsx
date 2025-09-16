@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Check, CreditCard, Clock, Shield, Zap, Database, Server, Lock, BarChart3, Users, Cpu, TrendingUp, DollarSign, HelpCircle } from "lucide-react";
 
 const Index = () => {
@@ -423,8 +424,188 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Social Proof */}
+      {/* Managed vs. Self-Managed Database */}
+      <section className="py-16 lg:py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-16 text-center">
+              Managed vs. Self-Managed MySQL Database
+            </h2>
+            
+            <div className="overflow-x-auto">
+              <Table className="w-full">
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="font-semibold text-foreground">Feature</TableHead>
+                    <TableHead className="font-semibold text-foreground">Managed Database Server by Utho</TableHead>
+                    <TableHead className="font-semibold text-foreground">Self-Managed Database Server</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">Deployment</TableCell>
+                    <TableCell className="text-green-600">Managed by Utho</TableCell>
+                    <TableCell className="text-muted-foreground">Deployed and managed by user</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Maintenance</TableCell>
+                    <TableCell className="text-green-600">Utho handles updates, patches, backups, etc.</TableCell>
+                    <TableCell className="text-muted-foreground">Users are responsible for updates, patches, backups</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Security</TableCell>
+                    <TableCell className="text-green-600">Security features managed by Utho include encryption, access controls, etc.</TableCell>
+                    <TableCell className="text-muted-foreground">Security configurations managed by user</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Support</TableCell>
+                    <TableCell className="text-green-600">Utho offers support with various service levels</TableCell>
+                    <TableCell className="text-muted-foreground">User may rely on community or paid vendor support</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Customization in Database Configuration</TableCell>
+                    <TableCell className="text-green-600">User creation, DB creation permissions, trusted host, backups, etc.</TableCell>
+                    <TableCell className="text-muted-foreground">Users manage these themselves</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Ease of Use</TableCell>
+                    <TableCell className="text-green-600">User-friendly interface, automated features</TableCell>
+                    <TableCell className="text-muted-foreground">Requires more technical expertise</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Reliability</TableCell>
+                    <TableCell className="text-green-600">High availability, redundancy, failover</TableCell>
+                    <TableCell className="text-muted-foreground">Dependent on user configuration and maintenance</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Monitoring & Analytics</TableCell>
+                    <TableCell className="text-green-600">Built-in monitoring tools and dashboards</TableCell>
+                    <TableCell className="text-muted-foreground">User must set up their own</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Data Backup & Recovery</TableCell>
+                    <TableCell className="text-green-600">Automatic backup and recovery provided by Utho</TableCell>
+                    <TableCell className="text-muted-foreground">User responsible for setting up and managing</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MySQL Cloud Pricing Plans */}
       <section className="py-16 lg:py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-16 text-center">
+              Flexible MySQL Cloud Pricing Plans
+            </h2>
+            
+            <div className="overflow-x-auto">
+              <Table className="w-full">
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="font-semibold text-foreground">RAM</TableHead>
+                    <TableHead className="font-semibold text-foreground">vCPU</TableHead>
+                    <TableHead className="font-semibold text-foreground">SSD Disk</TableHead>
+                    <TableHead className="font-semibold text-foreground">Bandwidth</TableHead>
+                    <TableHead className="font-semibold text-foreground">Plan</TableHead>
+                    <TableHead className="font-semibold text-foreground">Status</TableHead>
+                    <TableHead className="font-semibold text-foreground">Price</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">4 GB</TableCell>
+                    <TableCell>2 vCPU</TableCell>
+                    <TableCell>80 GB</TableCell>
+                    <TableCell>1000 GB</TableCell>
+                    <TableCell>Hourly</TableCell>
+                    <TableCell><span className="text-green-600 font-medium">Available</span></TableCell>
+                    <TableCell className="font-semibold text-primary">₹2,691/mo</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">8 GB</TableCell>
+                    <TableCell>4 vCPU</TableCell>
+                    <TableCell>160 GB</TableCell>
+                    <TableCell>1000 GB</TableCell>
+                    <TableCell>Hourly</TableCell>
+                    <TableCell><span className="text-green-600 font-medium">Available</span></TableCell>
+                    <TableCell className="font-semibold text-primary">₹5,391/mo</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">16 GB</TableCell>
+                    <TableCell>6 vCPU</TableCell>
+                    <TableCell>320 GB</TableCell>
+                    <TableCell>1000 GB</TableCell>
+                    <TableCell>Hourly</TableCell>
+                    <TableCell><span className="text-green-600 font-medium">Available</span></TableCell>
+                    <TableCell className="font-semibold text-primary">₹8,271/mo</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">32 GB</TableCell>
+                    <TableCell>8 vCPU</TableCell>
+                    <TableCell>480 GB</TableCell>
+                    <TableCell>1000 GB</TableCell>
+                    <TableCell>Hourly</TableCell>
+                    <TableCell><span className="text-green-600 font-medium">Available</span></TableCell>
+                    <TableCell className="font-semibold text-primary">₹13,491/mo</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">64 GB</TableCell>
+                    <TableCell>12 vCPU</TableCell>
+                    <TableCell>640 GB</TableCell>
+                    <TableCell>1000 GB</TableCell>
+                    <TableCell>Hourly</TableCell>
+                    <TableCell><span className="text-green-600 font-medium">Available</span></TableCell>
+                    <TableCell className="font-semibold text-primary">₹23,391/mo</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">96 GB</TableCell>
+                    <TableCell>24 vCPU</TableCell>
+                    <TableCell>840 GB</TableCell>
+                    <TableCell>1000 GB</TableCell>
+                    <TableCell>Hourly</TableCell>
+                    <TableCell><span className="text-green-600 font-medium">Available</span></TableCell>
+                    <TableCell className="font-semibold text-primary">₹44,991/mo</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">128 GB</TableCell>
+                    <TableCell>32 vCPU</TableCell>
+                    <TableCell>960 GB</TableCell>
+                    <TableCell>1000 GB</TableCell>
+                    <TableCell>Hourly</TableCell>
+                    <TableCell><span className="text-green-600 font-medium">Available</span></TableCell>
+                    <TableCell className="font-semibold text-primary">₹59,391/mo</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">192 GB</TableCell>
+                    <TableCell>48 vCPU</TableCell>
+                    <TableCell>1280 GB</TableCell>
+                    <TableCell>1000 GB</TableCell>
+                    <TableCell>Hourly</TableCell>
+                    <TableCell><span className="text-green-600 font-medium">Available</span></TableCell>
+                    <TableCell className="font-semibold text-primary">₹82,791/mo</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+            
+            <div className="text-center mt-12">
+              <p className="text-muted-foreground mb-6">
+                All plans include enterprise-grade security, automated backups, and 24×7 support
+              </p>
+              <Button variant="cta" size="lg" className="px-8">
+                Get Started Now
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof */}
+      <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
