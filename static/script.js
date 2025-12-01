@@ -1,5 +1,16 @@
 // Simple JavaScript for interactivity
 document.addEventListener('DOMContentLoaded', function() {
+    // Handle "Contact Expert" buttons
+    const contactButtons = document.querySelectorAll('.btn-secondary');
+    contactButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // You can customize this action - redirect to contact form or open email
+            window.location.href = 'mailto:support@utho.com?subject=MySQL Cloud Pricing Inquiry';
+            // Or redirect to a contact page:
+            // window.location.href = 'https://utho.com/contact';
+        });
+    });
+
     // Smooth scrolling for buttons
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
